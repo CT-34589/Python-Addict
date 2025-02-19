@@ -1,13 +1,13 @@
-a = 1 # assign a value to a variable
-a += 1 # increment a by n
-a -= 1 # decrement a by n
-a *= 6 # multiply a by n
+def tetration(a, b):
+    if b == 1:
+        return a
+    return a ** tetration(a, b - 1)
 
-a = a + 1 # this is equivalent to the above, its just longer
+print(tetration(2, 4)) # 2 ** 2 ** 2 ** 2 = 65536
 
-# Condition Statements
-if a == 2:
-    pass # this is a keyword that does nothing, used as a place holder when code hasnt been written yet
+def pentation(a, b):
+    if b == 1:
+        return a
+    return tetration(a, pentation(a, b - 1))
 
-while (condition): # condition can either be True or False or a statement (x == 3)
-    pass
+print(pentation(2, 3)) # 2 ** 2 ** 2 = 16

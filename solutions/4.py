@@ -48,3 +48,9 @@ elif choice == 4:
     print(divide(x,y))
 else:
     print("Invalid choice")
+
+
+"""
+int: integer -1,2,3,4...
+float: decimal - 1.345, 0.1, 20.0
+"""
